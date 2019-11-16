@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="csspage/pagecss.css">
+
+	<script src="Scripts/jquery.min.js"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="Scripts/popper.min.js" ></script>
+	<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script type="text/javascript" sec="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+	
+	
+<style type="text/css">
+	body{
+		background-color:black;
+		background-image:url('images/body/nintendo-nes-game-console-set-1637438.jpg');  
+		background-size:cover;
+		background-size:1000; 
+	}
+</style>
+</head>
+<body> 
+
+<form>
+
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+
+<body >
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+          	<a href="index.html"><h4 class="card-title text-center">Gamer Space</h4></a>
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin" name="form1">
+              <div class="form-label-group">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email address" onfocusout="ValidateEmail(document.form1.email)" required autofocus>
+               
+              </div>
+<br>
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+             
+              </div>
+
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember password</label>
+              </div>
+              <a href="register.html">Ragister hear..</a>
+              <br>
+                 <br>
+              <button class="btn btn-lg btn btn-outline-danger btn-block text-uppercase" type="submit">Sign in</button>
+              <hr class="my-4">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</form>
+
+<script type="text/javascript">
+function ValidateEmail(inputText)
+{
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(inputText.value.match(mailformat))
+	{
+
+	return true;
+	}
+	else
+	{
+	alert("You have entered an invalid email address!");
+	email.value = '';
+
+	return false;
+	}
+}
+</script>
+
+</body>
+</html>

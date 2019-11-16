@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="csspage/pagecss.css">
+
+	<script src="Scripts/jquery.min.js"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="Scripts/popper.min.js" ></script>
+	<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script type="text/javascript" sec="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+	
+	
+<style type="text/css">
+	body{
+	background:black;
+}
+
+.container{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
+.form-control{
+	border:none;
+	border-bottom:3px solid dodgerblue;
+	box-shadow: 
+	background:black;
+	color:white;
+	border-radius:0px;
+}
+
+.row{
+	width:60%;
+	margin-top:50px;
+	border: 3px solid #001a69;
+	border-radius:14px;
+	height:auto;
+	box-shadow:-5px -5px 30px 5px red, 5px 5px 30px 5px blue; 
+}
+input[type=text],[type=Email],[type=Password],[type="file"]{
+  
+  color:black;
+}
+
+h2{
+	color:white;
+}
+
+.checkbox span{
+	color:white;
+}
+
+.checkbox{
+	float:left;
+}
+
+button{
+	float:right;
+	width:120px;
+}
+
+@media(max-width:768px){
+	body{
+		font-size:10px;
+	}
+	
+	h2{
+		font-size:15px;
+	}
+	
+	input[type=text]{
+		font-size:13px;
+	}
+	
+	input[type=password]{
+		font-size:13px;
+	}
+	
+	input[type=email]{
+		font-size:13px;
+	}
+	
+	button{
+		width:80px;
+		height:30px;
+		float:right;
+		font-size:10px;
+		margin-bottom:10px;
+	}
+	
+	.checkbox{
+		display:inline;
+	}
+	
+}		
+</style>
+
+
+</head>
+<body> 
+
+<div class="container">
+  <div class="row">
+  <form action="/action_page.php" class="col-xs-12 col-sm-12 col-md-12" name="form1">
+  <h2>Gamer Space </h2>
+  <div class="form-group">
+      <input type="text" class="form-control" id="name" placeholder="Enter Name *" oninput="allLetter1(document.form1.name)" name="name" required>
+    </div>
+	
+	<div class="form-group">
+      <input type="text" class="form-control" id="surname" oninput="allLetter2(document.form1.surname)"  placeholder="Enter Second Name *" name="secondName" required>
+    </div>
+	
+    	<div class="form-group">
+      <input type="email" class="form-control" id="email"  onfocusout="ValidateEmail(document.form1.email)"	 placeholder="Enter email *" name="email" required>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="GamerName" placeholder="Enter GamerPF name  *" name="GamerName" required>
+    </div>
+    <div class="form-group">
+      <input type="file" class="form-control" accept=".jpg,.png,.gif" id="Profilepic" placeholder="Profile Pic  *" name="Pfname" required>
+    </div>
+	<div class="form-group">
+      <input type="password" class="form-control" id="password1" placeholder="Enter password *" name="password1" required>
+   </div>
+   <div class="form-group">
+      <input type="password" class="form-control" id="password2" oninput="Passwordch (document.form1.password)" placeholder="Repeat password *" name="password2" required>
+      <span id='message'></span>
+   </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> <span>Remember me</span></label>
+    </div>
+   <button type="reset"  class="btn btn-outline-danger">Clear</button>
+    <button type="submit" onclick="subcheck()" id="submit"  class="btn btn-outline-success enableOnInput">Submit</button>
+  
+  </form>
+  </div>
+</div>
+<script type="text/javascript">
+	 function subcheck() {  
+           
+        }  
+function ValidateEmail(inputText)
+{
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(inputText.value.match(mailformat))
+	{
+
+	return true;
+	}
+	else
+	{
+	alert("You have entered an invalid email address!");
+	email.value = '';
+
+	return false;
+	}
+}
+
+	function allLetter1(inputtxt)
+      { 
+      var letters = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(letters))
+      {
+     return true;
+      }
+      else
+      {
+      alert('Please input alphabet characters only');
+		document.getElementById('name').value = '';
+      return false;
+      }
+      }
+      function allLetter2(inputtxt)
+      { 
+      var letters = /^[A-Za-z]+$/;
+      if(inputtxt.value.match(letters))
+      {
+     return true;
+      }
+      else
+      {
+
+      alert('Please input alphabet characters only');
+      document.getElementById('surname').value = '';
+      return false;
+      }
+      }
+
+     $('#password1, #password2').on('keyup', function () {
+  if ($('#password1').val() == $('#password2').val()) {
+
+    $('#message').html('Matching').css('color', 'green');
+    	    $('.enableOnInput').prop('disabled', false);
+     
+  } else
+  { 
+    $('.enableOnInput').prop('disabled', true);
+   $('#message').html('Not Matching').css('color', 'red');	
+   } 
+   
+    	 
+});
+
+      
+</script>
+
+</body>
+</html>

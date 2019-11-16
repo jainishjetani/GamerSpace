@@ -1,0 +1,60 @@
+.divhome{
+		background-image: url('images/body/banter-snaps-3mWxKnqET3E-unsplash.jpg');
+		background-size:cover;
+		 background-position: fixed; 
+	}
+.gamesd{
+
+background-color:#1c1c1c;
+}
+
+.fcolor{
+ color:white;
+ font-family: Gabriola; 
+ font-size:2.2ex; 
+}
+.gdhover:hover{
+
+box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 3px 5px 13px 2px rgba(255,87,41,0);
+}
+
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.log{ text-shadow: 0 0 5px 5px  blue; 
+		font-size:30px; 
+ animation: logstyle 3.5s infinite;
+		}
+@keyframes logstyle {
+  0% {
+   
+  }
+  10% {
+   text-shadow: 0 0 8px  blue; 
+  }
+  15% {
+   text-shadow: 0 0  5px  red; 
+  }
+  20% {    
+   text-shadow:0 0  5px  green; 
+  }
+  75% {
+   text-shadow: 0 0 5px  yellow; 
+  }
+  80% {
+   text-shadow: 0 0 5px  orange; 
+  }
+  
+  100% {
+   text-shadow:0 0  5px pink; 
+  }
+}

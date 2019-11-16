@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Images</title>
+<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="csspage/pagecss.css">
+
+	<script src="Scripts/jquery.min.js"></script>
+	<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Scripts/jquery-3.2.1.slim.min.js"></script>
+	<script type="text/javascript" src="Scripts/popper.min.js" ></script>
+	<script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+	<script type="text/javascript" sec="bootstrap-4.3.1-dist/js/bootstrap.bundle.min.js"></script>
+	
+	<link rel="stylesheet" href="Scripts/font-awesome.min.css">	
+
+<style type="text/css">
+	.gallary
+	{
+		margin:10px 60px;
+	}
+	.gallary img
+	{
+		
+		-webkit-transition: width 1s linear 0s;
+		padding: 30px;
+		width: 295px;
+		height: 350px;
+		transition: 0.5s linear 0s;
+	}
+	.gallary img:hover
+	{
+		filter: grayscale(100%);
+		transform: scale(1.1);
+		
+		
+	}
+
+	.lgallary 
+	{
+		
+		margin:10px;
+  
+display: block;
+		width: 100%;
+		height: 350px;
+		transition: 0.5s linear 0s;
+	}
+
+
+
+
+	.sdeff{
+  
+ 
+}
+	body{
+		background-color:black; 
+	}
+
+
+</style>
+</head>
+<body> 
+<div class="gallary">
+<div> </div>
+
+<button class="btn btn-warning" id="listv" onclick="changeclass(); "> <i  class="fa fa-th-large"></i> Cahnge View</button>
+<br>
+<center>
+	<script type="text/javascript">
+		var grid;
+		
+		var set=0;
+	
+	
+		for (var i = 12; i > 0; i--) 
+	{
+		document.write(" <a href='images/Gallary/img/1 ("+i+").jpg' ><img class='sdeff' src='images/Gallary/img/1 ("+i+").jpg' ></a>");
+		
+	}
+	
+$(document).ready(function(){
+  $("#listv").click(function(){
+    $("img").toggleClass("lgallary");
+  });
+});
+
+
+
+	</script>
+</div>
+</center>
+</body>
+</html>

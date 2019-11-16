@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Test</title>
+  <meta charset="utf-8">
+  <!-- MOBILE FIRST -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <!-- THEMES -->
+  <!-- <link href="css/theme_black.min.css" rel="stylesheet"> -->
+  <!-- <link href="css/theme_white.min.css" rel="stylesheet"> -->
+
+  <!-- HOMEMADE - these files are local --> 
+  <!-- <script src="js/functions.js"></script> -->
+  <!-- <link href="css/custom_style.css" rel="stylesheet"> --> 
+</head>
+<body>
+<header id="header" class="header clearfix no-padding">
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Test</a>
+      </div>
+      <div class="collapse navbar-collapse no-padding">
+        <ul class="nav navbar-nav pull-right" id="navigator">
+          <li id="home"><a class="border" href="#">Home</a></li>
+          <li id="about"><a class="border" href="#">About</a></li>
+          <li id="cv"><a class="border" href="#">CV</a></li>
+          <li id="contact"><a class="border" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<body>
+  <script type="text/javascript">
+var selector = '.nav li';
+
+$(selector).on('click', function(){
+    $(selector).removeClass('active');
+    $(this).addClass('active');
+});
+
+</script>
+</body>
+
+
+</html>
