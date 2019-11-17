@@ -60,7 +60,7 @@ body{
       <div class="carousel-caption">
         <h3>Avenger</h3>
 
-        <a  href="#avd" slow target=""> <p>Marvel's Avengers Game - NEW </p></a>
+        <a  href="#avd" class="avgd" target=""> <p>Marvel's Avengers Game - NEW </p></a>
       </div>   
     </div>
     <div class="carousel-item">
@@ -149,7 +149,7 @@ Also, nearly 61 percent of India’s population is expected to be under the age 
 	</div>
 </div>
 </div>
-	<div class=" p-2" id="avd">
+	<div class="avgdeialis p-2" id="avd" class="" id="avgdeialis">
 			<img src="images\news\mua-3-right-625x352.png" class=" rounded " style="width:20%;" align="left">
 	<div class="ftcolor" style=" margin-left:250px; ">
 		Square Enix’s Marvel’s Avengers game should’ve been the biggest slam dunk in the world. After years of teasing that gave Final Fantasy VII remake a run for its vaporware money, the AAA superhero blockbuster made its big debut at E3 2019. But instead of benefiting from the outpouring of Marvel love following Avengers: Endgame, everyone was mostly creeped out by the off-brand actors.
@@ -168,6 +168,15 @@ While the title suggests this will be a follow-up to the original Marvel Ultimat
 </div>
 
 </body>
+<script type="text/javascript">
+	$(document).ready(function() {
+$(".avgd").click(function() {
+$('html, body').animate({
+scrollTop: $(".avgdeialis").offset().top
+}, 1500);
+});
 
+});
 </script>
+
 </html>
